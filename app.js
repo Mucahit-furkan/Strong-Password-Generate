@@ -1,17 +1,21 @@
-function generate() {
-    const chars = "0123456789qwertyuıopğüasdfghjklşizxcvbnmöç!_?"
-    let  passwordLenght = 20 
-    let password = ""
-
-    for (let i = 0; i < passwordLenght; i++ ) {
-        let randomNumber = Math.floor(Math.random() * chars.length);
-        password += chars.substring(randomNumber, randomNumber + 1);
-    }
-    document.getElementById("input1").value = password;
+const getRandomInt = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-
-
+const createPassword = () => {
+    const minCharCode = 33
+    const maxCharCode = 122
+    var password = ""
+    var length = document.getElementById("range").value
+    for (let i = 0; i < length; i++) {
+        var randomCharCode = getRandomInt(minCharCode, maxCharCode);
+        var randomChar = String.fromCharCode(randomCharCode)
+        password = password.concat(randomChar)
+    }
+    document.getElementById("password-output").value = password
+} 
 
 
 function copy() {
