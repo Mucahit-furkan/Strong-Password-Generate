@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: rgb(151, 149, 140);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  position:relative;
+  top: 25px;
+  right: 25px;
+  padding: 10px;
+  margin: 30px;
+  border-radius: 8px;
+  border: none;
+  font-size: 20;
+  cursor: pointer;
+}
+#btn2{
+  position:relative;
+  top: 25px;
+  right: 25px;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 20;
+  cursor: pointer;
+}
+.generate{
+  position:relative;
+  top: 25px;
+  right: 25px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 20;
+  cursor: pointer;
+}
