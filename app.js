@@ -1,7 +1,8 @@
 const getRandomInt = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min
+    var result = Math.floor(Math.random() * (max - min + 1)) + min;
+    return result
 }
 
 const createPassword = () => {
@@ -9,7 +10,7 @@ const createPassword = () => {
     const maxCharCode = 122
     var password = ""
     var length = document.getElementById("range").value
-    for (let i = 0; i < length; i++) {
+    for (let i = 1; i <= length; i++) {
         var randomCharCode = getRandomInt(minCharCode, maxCharCode);
         var randomChar = String.fromCharCode(randomCharCode)
         password = password.concat(randomChar)
